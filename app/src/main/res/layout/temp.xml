@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		android:padding="5dp"
+		android:id="@+id/mainLayoutRoot_LinearLayout">
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="壁纸源路径(可键入)："/>
+
+		<LinearLayout
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:orientation="horizontal">
+
+			<EditText
+				android:layout_height="wrap_content"
+				android:layout_width="0dp"
+				android:ems="10"
+				android:inputType="textUri"
+				android:id="@+id/mainLayoutWallpaperPath_EditText"
+				android:layout_weight="1.0"
+				android:layout_gravity="bottom"
+				android:typeface="monospace"
+				android:textSize="15sp"/>
+
+			<Button
+				android:layout_height="wrap_content"
+				android:layout_width="60dp"
+				android:text="..."
+				android:id="@+id/mainLayoutDiecrtorySelect_Button"/>
+
+		</LinearLayout>
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="间隔时间(秒)："/>
+
+		<EditText
+			android:layout_height="wrap_content"
+			android:inputType="number"
+			android:layout_width="wrap_content"
+			android:ems="5"
+			android:id="@+id/mainLayoutIntervalTime_EditText"
+			android:textSize="15sp"
+			android:typeface="monospace"
+			android:gravity="center"/>
+
+		<LinearLayout
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:orientation="horizontal">
+
+			<CheckBox
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:text="定时更换"/>
+
+			<CheckBox
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:text="解锁更换"/>
+
+		</LinearLayout>
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="壁纸类型："/>
+
+		<LinearLayout
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:orientation="horizontal">
+
+			<RadioGroup
+				android:layout_height="wrap_content"
+				android:layout_width="0dp"
+				android:orientation="vertical"
+				android:id="@+id/mainLayout_RadioGroup"
+				android:layout_weight="1.0">
+
+				<RadioButton
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:text="单屏壁纸"
+					android:id="@+id/mainLayoutSimpleType_RadioButton"/>
+
+				<RadioButton
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:text="滚动壁纸"
+					android:id="@+id/mainLayoutScrollType_RadioButton"/>
+
+				<RadioButton
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:text="滚动壁纸(固定宽度)"
+					android:id="@+id/mainLayoutScrollFixed_RadioButton"/>
+
+			</RadioGroup>
+
+			<Spinner
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:id="@+id/mainLayoutUpdateMode_Spinner"/>
+
+		</LinearLayout>
+
+		<CheckBox
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="自定义屏幕高宽"
+			android:id="@+id/mainLayoutCustomWH_CheckBox"/>
+
+		<LinearLayout
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:orientation="horizontal"
+			android:gravity="bottom"
+			android:id="@+id/mainLayoutCustomWH_LinearLayout"
+			android:visibility="gone">
+
+			<EditText
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:ems="4"
+				android:inputType="number"
+				android:id="@+id/mainLayoutCustomHeight_EditText"
+				android:typeface="monospace"
+				android:textSize="15sp"
+				android:gravity="center"/>
+
+			<TextView
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:text="×"
+				android:gravity="center"/>
+
+			<EditText
+				android:layout_height="wrap_content"
+				android:inputType="number"
+				android:layout_width="wrap_content"
+				android:ems="4"
+				android:id="@+id/mainLayoutCustomWidth_EditText"
+				android:typeface="monospace"
+				android:textSize="15sp"
+				android:gravity="center"/>
+
+		</LinearLayout>
+
+		<Switch
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="省电模式："
+			android:layout_gravity="end"
+			android:id="@+id/mainLayoutSleepMode_Switch"/>
+
+		<Switch
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:id="@+id/mainLayoutStrict_Switch"
+			android:text="精确模式："
+			android:layout_gravity="end"/>
+
+		<Switch
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="兼容模式："
+			android:id="@+id/mainLayoutCompat_Switch"
+			android:layout_gravity="end"/>
+
+		<Switch
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="开机自启："
+			android:layout_gravity="end"
+			android:id="@+id/activityMainBoot_Switch"/>
+
+		<Button
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="启用"
+			android:id="@+id/mainLayoutStart_Button"
+			android:layout_gravity="end"/>
+
+		<Button
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="停用"
+			android:id="@+id/mainLayoutStop_Button"
+			android:layout_gravity="end"/>
+
+	</LinearLayout>
+
+</LinearLayout>
+
