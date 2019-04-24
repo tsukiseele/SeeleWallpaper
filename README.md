@@ -1,2 +1,2 @@
 # SeeleWallpaper
-一个可以仿Windows幻灯片播放壁纸的APP
+一个仿Windows的幻灯片播放壁纸的APP
